@@ -79,12 +79,7 @@ WSGI_APPLICATION = 'appointment.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT')
+       'postgresql://appointmentdb_eoli_user:SMQR1tNhKYj4AaxBJTXz7S7d7r3OVzju@dpg-ct4dg33tq21c73934kug-a/appointmentdb_eoli'
     }
 }
 
