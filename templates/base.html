@@ -1,0 +1,469 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout-the-itvet.com {% block title %}{% endblock %} </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="active">
+        <a href="#" class="logo">iT<span>Vet</span></a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Resume</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- home section -->
+     <section class="home active">
+        <div class="home-detail">
+            <h1>iTVet</h1>
+            <h2>We are 
+                <span class="typing"></span>
+
+            </h2>
+            <p>With expertise in animal care and technology, We strive to revolutionize veterinary practices with innovative digital tools. Our work bridges compassion and tech, offering solutions that improve animal care and streamline veterinary operations.</p>
+            <div class="btn-sci">
+                <a href="#" class="btn explore-btn"><span class="explore"></span></a>
+                <div class="sci">
+                    <a href="https://github.com/erickssagala"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dr-erick-ssagala-b147571b5?utm_source=share&"><i class="bx bxl-linkedin" ></i></a>
+                    <a href="https://x.com/iTVet386336?t=wB_AYkKl6wCoL8YbQr6l3w&s=09"><i class="bx bx-x"></i></a>
+                    <a href="https://www.youtube.com/channel/UCVTb0iS3b8vMk-JsqvOX-bQ/"><i class="bx bxl-youtube"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="{% static 'images/home.png'%}" alt="iTVet">
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- services section -->
+     <section class="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bxs-capsule service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Large Animals</h3>
+                <p>Case Management</p>
+                <p>Surgery (C-Section etc.)</p>
+                <p>Laboratory work</p>
+                <p>Biosecurity Establishment</p>
+            </div>
+            
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bxs-dog service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Small Animals</h3>
+                <p>Diagnosis and Treatment</p>
+                <p>Vaccination (Rabies etc)</p>
+                <p>Surgeries (Castrations,Spays ...)</p>
+                <p>Grooming</p>
+            </div>
+            
+            <div class="services-box ">
+                <div class="icon">
+                    <i class="bx bxs-user-detail service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Consultations</h3>
+                <p>Animal Breeding</p>
+                <p>Animal Nutrition</p>
+                <p>Farm Structure setup</p>
+            </div>
+        
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bxs-video service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Veterinary Virtual Care</h3>
+                <p>Coming Soon....</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bxs-check-shield service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Electronic Branding</h3>
+                <p>Coming Soon....</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bx-shape-square service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Digital Fencing</h3>
+                <p>Coming Soon....</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bxl-dev-to service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Web Development</h3>
+                <p>Coming Soon....</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class="bx bxl-dev-to service-icon"></i>
+                    <a href="#"><i class="bx bx-arrow-back"></i></a>
+                </div>
+                <h3>Mobile Development</h3>
+                <p>Coming Soon....</p>
+            </div>
+        </div>
+     </section>
+
+    <!-- resume section -->
+     <section class="resume">
+        <div class="resume-container">
+            <div class="resume-box">
+                <h2>Why Hire Me?</h2>
+                <p class="desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, perferendis. Itaque maxime provident praesentium libero, eligendi, similique numquam neque labore ad quaerat explicabo fugit quos magni! Facere nostrum natus esse!
+                </p>
+                <button class="resume-btn active">Experience</button>
+                <button class="resume-btn">Education</button>
+                <button class="resume-btn">Skills</button>
+                <button class="resume-btn">About Me</button>
+            </div>
+
+            <div class="resume-box">
+                <div class="resume-detail experience active">
+                    <h2 class="heading">My <span>Experience</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ex voluptate rem adipisci qui non sunt ab ducimus nostrum iusto. Iusto earum quo quibusdam incidunt praesentium, aspernatur cumque? Autem, eaque.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year">2022 - Present</p>
+                            <h3>Frontend Developer</h3>
+                            <p class="company">iTVet Corp.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur  necessitatibus.</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year">2016 - 2022</p>
+                            <h3>Veterinarian</h3>
+                            <p class="company">Covab</p>
+                            <p>Lorem ipsum dolor sit amet consectetur  necessitatibus.</p>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <p class="year">2016 - 2022</p>
+                            <h3>Veterinarian</h3>
+                            <p class="company">Covab</p>
+                            <p>Lorem ipsum dolor sit amet consectetur  necessitatibus.</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year">2016 - 2022</p>
+                            <h3>Veterinarian</h3>
+                            <p class="company">Covab</p>
+                            <p>Lorem ipsum dolor sit amet consectetur necessitatibus.</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="resume-detail education">
+                    <h2 class="heading">My <span>Education</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ex voluptate rem adipisci qui non sunt ab ducimus nostrum iusto. Iusto earum quo quibusdam incidunt praesentium, aspernatur cumque? Autem, eaque.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year">2022 - Present</p>
+                            <h3>Makerere University</h3>
+                            <p class="company">iTVet Corp.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur  necessitatibus.</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year">2016 - 2022</p>
+                            <h3>Veterinarian</h3>
+                            <p class="company">Covab</p>
+                            <p>Lorem ipsum dolor sit amet consectetur  necessitatibus.</p>
+                        </div>
+                        
+                        <div class="resume-item">
+                            <p class="year">2016 - 2022</p>
+                            <h3>Veterinarian</h3>
+                            <p class="company">Covab</p>
+                            <p>Lorem ipsum dolor sit amet consectetur  necessitatibus.</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year">2016 - 2022</p>
+                            <h3>Veterinarian</h3>
+                            <p class="company">Covab</p>
+                            <p>Lorem ipsum dolor sit amet consectetur necessitatibus.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="resume-detail skills">
+                    <h2 class="heading">My <span>Skills</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ex voluptate rem adipisci qui non sunt ab ducimus nostrum iusto. Iusto earum quo quibusdam incidunt praesentium, aspernatur cumque? Autem, eaque.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <i class="bx bxl-java"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class="bx bxl-react"></i>
+                            <span>SURGERY</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-detail about">
+                    <h2 class="heading">My <span>About Me</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ex voluptate rem adipisci qui non sunt ab ducimus nostrum iusto. Iusto earum quo quibusdam incidunt praesentium, aspernatur cumque? Autem, eaque.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p>Name <span>iTVet</span></p>                           
+                        </div>
+                        <div class="resume-item">
+                            <p>Location <span>Kampala, UG</span></p>
+                        </div>
+                        <div class="resume-item">                           
+                            <p>Contact <span>0781354924</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Email <span>ivet2023@gmail.com</span></p>                           
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </section>
+
+    <!-- portfolio section -->
+     <section class="portfolio ">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <div class="portfolio-detail active">
+                    <p class="numb">01</p>
+                    <h3>Veterinary Services</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione, veritatis laborum voluptatem necessitatibus cum. Pariatur beatae totam veritatis accusantium possimus deleniti repudiandae. Eveniet, veritatis corporis mollitia saepe ab aut.</p>
+                    <div class="vet">
+                        <p>Surgery, Medicine, Reproduction</p>
+                    </div>
+                    <div class="live-link">
+                        <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
+                        <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">02</p>
+                    <h3>Software Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione, veritatis laborum voluptatem necessitatibus cum. Pariatur beatae totam veritatis accusantium possimus deleniti repudiandae. Eveniet, veritatis corporis mollitia saepe ab aut.</p>
+                    <div class="vet">
+                        <p>Surgery, Medicine, Reproduction</p>
+                    </div>
+                    <div class="live-link">
+                        <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
+                        <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-detail">
+                    <p class="numb">03</p>
+                    <h3>Laboratory Services</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione, veritatis laborum voluptatem necessitatibus cum. Pariatur beatae totam veritatis accusantium possimus deleniti repudiandae. Eveniet, veritatis corporis mollitia saepe ab aut.</p>
+                    <div class="vet">
+                        <p>Surgery, Medicine, Reproduction</p>
+                    </div>
+                    <div class="live-link">
+                        <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
+                        <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">04</p>
+                    <h3>Vaccination</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione, veritatis laborum voluptatem necessitatibus cum. Pariatur beatae totam veritatis accusantium possimus deleniti repudiandae. Eveniet, veritatis corporis mollitia saepe ab aut.</p>
+                    <div class="vet">
+                        <p>Surgery, Medicine, Reproduction</p>
+                    </div>
+                    <div class="live-link">
+                        <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
+                        <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">05</p>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione, veritatis laborum voluptatem necessitatibus cum. Pariatur beatae totam veritatis accusantium possimus deleniti repudiandae. Eveniet, veritatis corporis mollitia saepe ab aut.</p>
+                    <div class="vet">
+                        <p>Surgery, Medicine, Reproduction</p>
+                    </div>
+                    <div class="live-link">
+                        <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
+                        <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">06</p>
+                    <h3>Pathology</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione, veritatis laborum voluptatem necessitatibus cum. Pariatur beatae totam veritatis accusantium possimus deleniti repudiandae. Eveniet, veritatis corporis mollitia saepe ab aut.</p>
+                    <div class="vet">
+                        <p>Surgery, Medicine, Reproduction</p>
+                    </div>
+                    <div class="live-link">
+                        <a href="#"><i class="bx bx-arrow-back"></i><span>Live Project</span></a>
+                        <a href="#"><i class="bx bxl-github"></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="portfolio-box">
+                <!-- images carousel -->
+                 <div class="portfolio-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="{% static 'images/portfolio1.jpg'%}" alt="image">
+                        </div>
+                        <div class="img-item">
+                            <img src="{% static 'images/portfolio2.jpg'%}" alt="image">
+                        </div>
+                        <div class="img-item">
+                            <img src="{% static 'images/portfolio3.jpg'%}" alt="image">
+                        </div>
+                        <div class="img-item">
+                            <img src="{% static 'images/portfolio4.jpg'%}" alt="image">
+                        </div>
+                        <div class="img-item">
+                            <img src="{% static 'images/portfolio5.jpg'%}" alt="image">
+                        </div>
+                        <div class="img-item">
+                            <img src="{% static 'images/portfolio6.jpg'%}" alt="image">
+                        </div>
+                    </div>
+                 </div>
+
+                 <div class="navigation">
+                    <button class="arrow-left disabled">
+                        <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <button class="arrow-right">
+                        <i class="bx bx-chevron-right"></i>
+                    </button>
+                 </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- contact section -->
+     <section class="contact">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Let's Work Together</h2>
+                <p class="desc">iTVet combines veterinary expertise and cutting-edge software development to deliver innovative solutions tailored to modern animal care and veterinary practice management. With a commitment to excellence and a unique blend of animal care knowledge and technical skills, iTVet empowers clients to streamline operations and provide superior services to their customers</p>
+                <div class="contact-detail">
+                    <i class="bx bxs-phone"></i>
+                    <div class="detail">
+                        <p>Phone</p>
+                        <p>(+256-781 354 924)</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="bx bxs-envelope"></i>
+                    <div class="detail">
+                        <p>Email</p>
+                        <p>itvet2023@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <i class="bx bxs-map"></i>
+                    <div class="detail">
+                        <p>Address</p>
+                        <p>Kampala, UG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <form action="">
+                    <h2 class="heading">Contact <span>Us!</span></h2>
+                    <div class="field-box">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="Phone" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Email Subject" required>
+                        <textarea name="" id="" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </div>
+     </section>
+    
+    <!-- custom js -->
+    <script src="{% static 'js/app.js'%}"></script>
+</body>
+
+</html>

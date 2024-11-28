@@ -1,0 +1,17 @@
+{% extends "base-auth.html" %}
+
+{% block content %}
+      
+<div class="contact-box">
+    <form action="">
+        <h2 class="heading">Log<span>in</span></h2>
+        <div class="field-box">
+            {% comment %} <input type="text" placeholder="Full Name" required> {% endcomment %}
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+</div>
+        
+{% endblock %}
