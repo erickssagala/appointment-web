@@ -76,11 +76,10 @@ WSGI_APPLICATION = 'appointment.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+env = environ.Env()
+environ.Env.read_env()
 DATABASES = {
-    'default': {
-       'postgresql://appointmentdb_eoli_user:SMQR1tNhKYj4AaxBJTXz7S7d7r3OVzju@dpg-ct4dg33tq21c73934kug-a/appointmentdb_eoli'
-    }
+    'default': env.db('postgresql://appointmentdb_eoli_user:SMQR1tNhKYj4AaxBJTXz7S7d7r3OVzju@dpg-ct4dg33tq21c73934kug-a/appointmentdb_eoli')
 }
 
 
