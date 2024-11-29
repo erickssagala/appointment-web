@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
-import environ
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,12 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-77)ms+v+zvvd)a+ic(+dr0$7zxw!o8xbfy_st6#_q!vk8&8dcc'
+# django-insecure-77)ms+v+zvvd)a+ic(+dr0$7zxw!o8xbfy_st6#_q!vk8&8dcc
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", 'False').lower() == "true"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -77,13 +78,21 @@ WSGI_APPLICATION = 'appointment.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-env = environ.Env()
-environ.Env.read_env()
+
 DATABASES = {
-    'default': env.db('postgresql://appointmentdb_eoli_user:SMQR1tNhKYj4AaxBJTXz7S7d7r3OVzju@dpg-ct4dg33tq21c73934kug-a/appointmentdb_eoli')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
+    }
 }
 
-
+database_url = os.environ.get("postgresql://appointmentdb_eoli_user:SMQR1tNhKYj4AaxBJTXz7S7d7r3OVzju@dpg-ct4dg33tq21c73934kug-a/appointmentdb_eoli")
+DATABASES["default"] = dj_database_url.parse(database_url)
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
