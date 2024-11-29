@@ -91,7 +91,7 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("postgresql://appointmentdb_eoli_user:SMQR1tNhKYj4AaxBJTXz7S7d7r3OVzju@dpg-ct4dg33tq21c73934kug-a/appointmentdb_eoli")
+database_url = os.environ.get("DATABASE_URL")
 DATABASES["default"] = dj_database_url.parse(database_url)
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
