@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.http import JsonResponse
 from django.contrib.auth.models import User
-from validate_email import validate_email
+from validate_email_address import validate_email
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.core.mail.backends.smtp import EmailBackend
