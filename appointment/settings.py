@@ -83,8 +83,8 @@ DATABASES = {
     }
 }
 
-# database_url = os.environ.get("DATABASE_URL", 'postgresql://DB_USER:DB_USER_PASSWORD@localhost:5432/DB_NAME?sslmode=disable')
-# DATABASES["default"] = dj_database_url.parse(database_url)
+database_url = os.environ.get("DATABASE_URL", 'postgresql://DB_USER:DB_USER_PASSWORD@localhost:5432/DB_NAME?sslmode=disable')
+DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 
