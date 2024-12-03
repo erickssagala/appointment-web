@@ -1,17 +1,25 @@
 {% extends "base-auth.html" %}
 
+{% load static %}
 {% block content %}
       
 <div class="contact-box">
-    <form action="">
+    <form action="{% url 'login' %}" method="post">
+
+        {% csrf_token %}
+        {% include 'common/messages.html' %}
+
         <h2 class="heading">Log<span>in</span></h2>
         <div class="field-box">
-            {% comment %} <input type="text" placeholder="Full Name" required> {% endcomment %}
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+            <input name="username" id="username-field" type="text" placeholder="Username" required>
+
+            <input name="password" id="password-field" type="password" placeholder="Password" required>
+            <h3 class="show-password">Show</h3>
         </div>
         <button type="submit" class="btn">Login</button>
     </form>
 </div>
+
+<script src="{% static 'js/auth.js' %}"></script>
         
 {% endblock %}

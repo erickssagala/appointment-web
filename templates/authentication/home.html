@@ -1,0 +1,18 @@
+{% extends "base-auth.html" %}
+
+{% load static %}
+{% block content %}
+      
+<div class="contact-box">
+    <form action="{% url 'logout' %}" method="post">
+
+        {% csrf_token %}
+        {% include 'common/messages.html' %}
+
+        <input class="nav-link" type="submit" value="Logout">
+    </form>
+</div>
+
+<script src="{% static 'js/auth.js' %}"></script>
+        
+{% endblock %}

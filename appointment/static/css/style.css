@@ -71,6 +71,20 @@ nav a {
     transition: .5s;
 }
 
+header button {
+    font-size: 2rem;
+    color: var(--navy-blue-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+header button:hover{
+    color: var(--main-color);
+    font-weight: 700;
+}
+
 nav a:hover, nav a.active{
     color: var(--main-color);
     font-weight: 700;

@@ -1,17 +1,29 @@
 {% extends "base-auth.html" %}
 
+{% load static %}
 {% block content %}
       
 <div class="contact-box">
-    <form action="">
-        <h2 class="heading"><span>Reg</span>ister</h2>
+    <form action="{% url 'register' %}" method="post">
+
+        {% csrf_token %}
+        {% include 'common/messages.html' %}
+
+        <h2 class="heading">Reg<span>ister</span></h2>
         <div class="field-box">
-            {% comment %} <input type="text" placeholder="Full Name" required> {% endcomment %}
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+            <input name="username" id="username-field" type="text" placeholder="Username" value="{{fieldValues.username | default:""}}" required>
+            <div class="username-error-field"></div>
+            <p class="username-check"></p>
+            <input name="email" id="email-field" type="email" placeholder="Email" value="{{fieldValues.email | default:""}}" required>
+            <div class="email-error-field"></div>
+            <p class="email-check"></p>
+            <input name="password" id="password-field" type="password" placeholder="Password" required>
+            <h3 class="show-password">Show</h3>
         </div>
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn submit-btn">Register</button>
     </form>
 </div>
+
+<script src="{% static 'js/auth.js' %}"></script>
         
 {% endblock %}

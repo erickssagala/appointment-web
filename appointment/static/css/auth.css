@@ -1,0 +1,17 @@
+.username-error-field, .email-error-field{
+    display: none;
+}
+
+.username-check, .email-check{
+    display: none;
+}
+
+.show-password{
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all;
+}
+
+.show-password:hover{
+    transform: scale(1.3);
+}
