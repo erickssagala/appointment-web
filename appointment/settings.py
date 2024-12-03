@@ -20,7 +20,7 @@ SECRET_KEY = 'django-insecure-77)ms+v+zvvd)a+ic(+dr0$7zxw!o8xbfy_st6#_q!vk8&8dcc
 DEBUG = os.environ.get("DEBUG", 'False').lower() == "true"
 # DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "https://appointment-web-jhdj.onrender.com").split(" ")
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.com").split(" ")
 # ALLOWED_HOSTS = []
 
 
