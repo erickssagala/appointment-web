@@ -17,11 +17,11 @@ SECRET_KEY = 'django-insecure-77)ms+v+zvvd)a+ic(+dr0$7zxw!o8xbfy_st6#_q!vk8&8dcc
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get("DEBUG", 'False').lower() == "true"
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", 'False').lower() == "true"
+# DEBUG = True
 
-# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.com").split(" ")
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.com").split(" ")
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -84,8 +84,8 @@ DATABASES = {
     }
 }
 
-# database_url = os.environ.get("DATABASE_URL", 'postgresql://DB_USER:DB_USER_PASSWORD@localhost:5432/DB_NAME?sslmode=disable')
-# DATABASES["default"] = dj_database_url.parse(database_url)
+database_url = os.environ.get("DATABASE_URL", 'postgresql://DB_USER:DB_USER_PASSWORD@localhost:5432/DB_NAME?sslmode=disable')
+DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 
