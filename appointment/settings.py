@@ -30,6 +30,7 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.c
 # Application definition
 
 INSTALLED_APPS = [
+    'appointment.apps.appointmentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'portfolio',
     'authentication',
     'work',
-    'admin',
 ]
 
 MIDDLEWARE = [
