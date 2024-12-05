@@ -32,6 +32,19 @@ def my_appointments(request):
     }
     return render(request, 'appointment/my_appointments.html', context)
 
+def appointment_dash(request):
+    # categories=Category.objects.all()
+    # appointments = Appointment.objects.filter(owner=request.user)
+    # paginator=Paginator(appointments, 3)
+    # page_number=request.GET.get('page')
+    # page_object=Paginator.get_page(paginator, page_number)
+    
+    # context={
+    #     'appointments':appointments,
+    #     'page_obj':page_object
+    # }
+    return render(request, 'appointment/appointment_dash.html')
+
 def add_appointment(request):
     categories=Category.objects.all()
     context={

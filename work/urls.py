@@ -9,4 +9,5 @@ urlpatterns = [
    path('edit_appointment/<int:id>', views.edit_appointment, name='edit_appointment'),
    path('delete_appointment/<int:id>', views.delete_appointment, name='delete_appointment'),
    path('search_appointments', csrf_exempt(views.search_appointments), name='search_appointments'),
+   path('appointment_dash', views.appointment_dash, name='appointment_dash'),
 ]

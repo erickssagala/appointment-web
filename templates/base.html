@@ -49,6 +49,11 @@
                 {% csrf_token %}
                 <button type="submit">Appointments</button>
             </form>
+
+            <form method="get" action="{% url 'appointment_dash' %}">
+                {% csrf_token %}
+                <button type="submit">Dash</button>
+            </form>
         </nav>
         
         
