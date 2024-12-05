@@ -3,9 +3,6 @@ from django.contrib import messages
 import os
 import dj_database_url
 
-import django
-django.setup()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,7 +27,6 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.c
 # Application definition
 
 INSTALLED_APPS = [
-    'appointment.apps.appointmentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -153,14 +149,14 @@ EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.
 
 # EMAIL_DEBUG = True
 
-if os.environ.get("CREATE_SUPERUSER"):
-    from django.contrib.auth.models import User
-    if not User.objects.filter(username="admin").exists():
-        User.objects.create_superuser(
-            username=os.environ.get("DJANGO_SUPERUSER_USERNAME", "itvet"),
-            email=os.environ.get("DJANGO_SUPERUSER_EMAIL", "itvet2023@gmail.com"),
-            password=os.environ.get("DJANGO_SUPERUSER_PASSWORD", "Admin@123"),
-        )
+# if os.environ.get("CREATE_SUPERUSER"):
+#     from django.contrib.auth.models import User
+#     if not User.objects.filter(username="admin").exists():
+#         User.objects.create_superuser(
+#             username=os.environ.get("DJANGO_SUPERUSER_USERNAME", "itvet"),
+#             email=os.environ.get("DJANGO_SUPERUSER_EMAIL", "itvet2023@gmail.com"),
+#             password=os.environ.get("DJANGO_SUPERUSER_PASSWORD", "Admin@123"),
+#         )
 
 
 # LOGGING = {
