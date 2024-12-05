@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'authentication',
+    'work',
 ]
 
 MIDDLEWARE = [
@@ -146,7 +147,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 
-EMAIL_DEBUG = True
+# EMAIL_DEBUG = True
 
 
 # LOGGING = {

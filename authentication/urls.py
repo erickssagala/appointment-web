@@ -5,13 +5,13 @@ from .views import ResetPasswordView
 from .views import SetNewPasswordView
 from .views import UsernameValidationView
 from .views import EmailValidationView
-from .views import ActivationView, HomeView, LogoutView
+from .views import ActivationView, LogoutView
 
 from django.views.decorators.csrf import csrf_exempt
 
 
 urlpatterns = [
-    path('home', HomeView.as_view(), name='home'),
+    # path('home', HomeView.as_view(), name='home'),
     path('logout', LogoutView.as_view(), name='logout'),
     path('login', LoginView.as_view(), name='login'),
     path('register', RegisterView.as_view(), name='register'),

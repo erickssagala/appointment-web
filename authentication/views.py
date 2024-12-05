@@ -23,9 +23,9 @@ from .utils import token_generator
 import json
 
 # Create your views here.
-class HomeView(View):
-    def get(self, request):
-        return render(request,'authentication/home.html')
+# class HomeView(View):
+#     def get(self, request):
+#         return render(request,'authentication/home.html')
     
 class LogoutView(View):
     def post(self, request):

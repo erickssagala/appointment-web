@@ -29,19 +29,26 @@
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
             
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+            <form method="get" action="{% url 'login' %}">
+                {% csrf_token %}
+                <button type="submit">Login</button>
+            </form>
+            <form method="get" action="{% url 'register' %}">
+                {% csrf_token %}
+                <button type="submit">Register</button>
+            </form>
+    
+            <form method="get" action="{% url 'my_appointments' %}">
+                {% csrf_token %}
+                <button type="submit">Appointments</button>
+            </form>
         </nav>
-        <form method="post" action="{% url 'logout' %}">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-        </form>
-        <form method="get" action="{% url 'login' %}">
-            {% csrf_token %}
-            <button type="submit">Login</button>
-        </form>
-        <form method="get" action="{% url 'register' %}">
-            {% csrf_token %}
-            <button type="submit">Register</button>
-        </form>
+        
+        
     </header>
 
     <!-- home section -->

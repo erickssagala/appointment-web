@@ -1,0 +1,132 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments {% block title %}{% endblock %} </title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+
+<body>
+
+   <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-10">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active"><a href="{% url 'my_appointments' %}">Appointments</a></li>
+                        <li class="breadcrumb-item" aria-current="page">My Appointments</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'add_appointment' %}" class="btn btn-primary">Add Appointment</a>
+            </div>
+        </div>
+   </div>
+
+   {% include "common/messages.html" %}
+
+   <div class="container">
+    {% if appointments.count %}
+        {% comment %} Search {% endcomment %}
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    {% csrf_token %}
+                    <input id="search-field" type="text" class="form-control" placeholder="Search">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="app_table">
+            <table class="table table-stripped table-hover">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th></th>
+                        <th></th>
+                        
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    {% for appointment in page_obj %}
+                    <tr>
+                        <td>{{appointment.category}}</td>
+                        <td>{{appointment.description}}</td>
+                        <td>{{appointment.date}}</td>
+                        <td>status</td>
+                        <td><a href="{% url 'edit_appointment' appointment.id %}" class="btn btn-secondary btn-sm">Edit</a></td>
+                        <td><a href="{% url 'delete_appointment' appointment.id %}" class="btn btn-danger btn-sm">Delete</a></td>
+                        
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+                
+            </table>
+        </div>
+
+        <p class="no-results" style="display: none;">No results </p>
+
+        <div class="table_output">
+            <table class="table table-stripped table-hover">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th></th>
+                        <th></th>
+                        
+                    </tr>
+                </thead>
+    
+                <tbody class="table-body">
+                    
+                    
+                </tbody>
+                
+            </table>
+        </div>
+
+        <div class="pagination-container">
+            <div class="">
+              Showing page {{page_obj.number}} of {{ page_obj.paginator.num_pages }}
+            </div>
+            <ul class="pagination align-right float-right mr-auto">
+              {% if page_obj.has_previous %}
+              <li {% if page_obj.number == 1 %} class="page-item active" {% endif %}><a class="page-link" href="?page=1">&laquo; 1</a></li>
+              <li class="page-item"> <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+              {% endif %}
+            
+              {% if page_obj.has_next %}
+              <li class="page-item"> <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+              <li class="page-item"> <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages}} &raquo;</a></li>
+              {% endif %}
+            
+            
+            </ul>
+        </div>
+        {% endif %}
+   </div>
+    
+    
+    <!-- custom js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/appointment.js' %}"></script>
+</body>
+
+</html>
