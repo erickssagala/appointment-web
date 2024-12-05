@@ -47,7 +47,7 @@
                             {% endfor %}
                         </select>
                         <label for="">Date</label>
-                        <input type="date" class="form-control-sm" name="date">
+                        <input value="{{values.date |date:'Y-m-d'}}" type="date" class="form-control-sm" name="date">
                     </div>
                     <input type="submit" value="Save" class="btn btn-primary btn-primary-sm">
                 </form>

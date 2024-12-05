@@ -17,11 +17,11 @@ SECRET_KEY = 'django-insecure-77)ms+v+zvvd)a+ic(+dr0$7zxw!o8xbfy_st6#_q!vk8&8dcc
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", 'False').lower() == "true"
-# DEBUG = True
+# DEBUG = os.environ.get("DEBUG", 'False').lower() == "true"
+DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.com").split(" ")
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "appointment-web-jhdj.onrender.com").split(" ")
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -84,8 +84,8 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("DATABASE_URL", 'postgresql://DB_USER:DB_USER_PASSWORD@localhost:5432/DB_NAME?sslmode=disable')
-DATABASES["default"] = dj_database_url.parse(database_url)
+# database_url = os.environ.get("DATABASE_URL", 'postgresql://DB_USER:DB_USER_PASSWORD@localhost:5432/DB_NAME?sslmode=disable')
+# DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 
@@ -148,6 +148,15 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 
 # EMAIL_DEBUG = True
+
+if os.environ.get("CREATE_SUPERUSER"):
+    from django.contrib.auth.models import User
+    if not User.objects.filter(username="admin").exists():
+        User.objects.create_superuser(
+            username=os.environ.get("DJANGO_SUPERUSER_USERNAME", "itvet"),
+            email=os.environ.get("DJANGO_SUPERUSER_EMAIL", "itvet2023@gmail.com"),
+            password=os.environ.get("DJANGO_SUPERUSER_PASSWORD", "Admin@123"),
+        )
 
 
 # LOGGING = {

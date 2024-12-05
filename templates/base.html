@@ -21,8 +21,11 @@
     <header class="active">
         <a href="#" class="logo">iT<span>Vet</span></a>
 
+        <span href="{% url 'my_appointments' %}">{{request.user.username}}</span>
+
         <i class="bx bx-menu" id="menu-icon"></i>
         <nav>
+            
             <a href="#" class="active">Home</a>
             <a href="#">Services</a>
             <a href="#">Resume</a>
